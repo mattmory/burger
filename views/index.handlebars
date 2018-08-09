@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="jumbotron vertical-center" id="main-burger">
+        <h1>Burgers!</h1>
+        <div class="row">
+            <div class="col-md-3 offset-md-1">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Burgers to Eat!</h5>
+                        <ul>
+                            {{#each burger}} {{#unless eaten}} {{> burgers/burger-block eaten=false}} {{/unless}} {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Make a new burger!</h5>
+                        <div class="form-group">
+                            <label form="burger">Burger Name?:</label>
+                            <input type="text" id="burger" name="name">
+                        </div>
+                        <button class="btn btn-secondary" type="submit">Make it edible.</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 offset-md-1">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Burgers Eaten!</h5>
+                        <ul>
+                            {{#each burger}} {{#if eaten}} {{> burgers/burger-block eaten=true}} {{/if}} {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
