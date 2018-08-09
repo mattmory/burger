@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "b5d6558bda0ea8",
-    "password": "c3d222bf",
-    "database": "burger_db",
+    "username": "ba8d0f0711f54a",
+    "password": "ae5b5066",
+    "database": "heroku_e8aa6cf2cc216b5",
     "host": "us-cdbr-iron-east-01.cleardb.net",
     "dialect": "mysql"
   }}
