@@ -1,8 +1,11 @@
 $(function () {
     $(".eat-burger").on("click", function (event) {
         var id = $(this).data("id");
+        var eatenField = "#burger-" + id;
+        var eatenBy = $(eatenField).val().trim();
         var eatBurger = {
-            eaten: true
+            eaten: true,
+            eaten_by: eatenBy
         };
 
         // Send the PUT request.
