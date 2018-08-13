@@ -3,7 +3,7 @@ module.exports = function(sequalize, DataTypes) {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {len: {args:  [1,25],message: "Burger Names must be between 1 and 25 characters"}}
+            validate: {len: {args:  [1,55],message: "Burger Names must be between 1 and 55 characters."}}
         },
         eaten: {
             type: DataTypes.BOOLEAN,
@@ -11,7 +11,9 @@ module.exports = function(sequalize, DataTypes) {
             defaultValue: false},
         eaten_by: {
             type: DataTypes.STRING,
-            allowNull: true},
+            allowNull: true,
+            validate: {len: {args:  [1,55],message: "Eater Names must be between 1 and 55 characters."}}
+        }
     });
     return Burger;
 }
