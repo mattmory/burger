@@ -9,6 +9,7 @@ A burger tracker.
     
 # Database Schema
  table: burger
+
     id: integer
     name: string
     eaten: boolean
@@ -21,3 +22,5 @@ A burger tracker.
 * [express] - HTTP server.
 * [express-handlebars] - Dynamic HTML Generation
 * [Sequelizer] - MySQL Interaction
+* [jQuery] - DOM interaction
+* [Bootstrap] - CSS Framework
