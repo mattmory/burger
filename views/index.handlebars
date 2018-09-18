@@ -1,56 +1,52 @@
-<div class="container-fluid">
-    <div class="jumbotron vertical-center" id="main-burger">
-        <h1>Burgers!</h1>
-        <div class="row">
-            <div class="col-md-5 offset-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Make a new burger!</h5>
-                        <form class="create-burger">
-                            <div class="form-group">
-                                <label form="burger">Burger Name?</label>
-                                <input type="text" id="burger" name="name">
-                            </div>
-                            <button class="btn btn-secondary" type="submit">Make it edible.</button>
-                        </form>
-                    </div>
-                </div>
+<div class="container-fluid outer-container">
+  <div class="jumbotron vertical-center" id="main-burger">
+    <h1 class="main-title">Burgers Championships!</h1>
+    <div class="single-card-div">
+      <div class="card single-card-right">
+        <div class="card-body">
+          <form class="create-burger">
+            <div class="form-group">
+              <input type="text" id="burger" name="name">
             </div>
+            <button class="btn btn-secondary" type="submit">Make a burger!</button>
+          </form>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Burgers to Eat!</h5>
-                        <ul>
-                            {{#each burgers.burger}} {{#unless eaten}} {{> burgers/burger-block eaten=false}} {{/unless}} {{/each}}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Burgers Eaten!</h5>
-                        <ul>
-                            {{#each burgers.burger}} {{#if eaten}} {{> burgers/burger-block eaten=true}} {{/if}} {{/each}}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 offset-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Burger Champs!</h5>
-                        <ul>
-                            {{#each champions.champion}}
-                            <li>{{eaten_by}} has eaten {{count}} burgers!</li>{{/each}}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6 left-col">
+      <div class="card double-card-left">
+        <h5 class="card-title">Eat a burger!</h5>
+        <div class="card-body scroll-card">
+          <ul>
+            {{#each burgers.burger}} {{#unless eaten}} {{> burgers/burger-block eaten=false}} {{/unless}} {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 right-col">
+      <div class="card double-card-right">
+        <h5 class="card-title">The stats.</h5>
+        <div class="card-body scroll-card">
+          <ul>
+            {{#each burgers.burger}} {{#if eaten}} {{> burgers/burger-block eaten=true}} {{/if}} {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="single-card-div">
+    <div class="card single-card-right">
+      <h5 class="card-title">The leader board.</h5>
+      <div class="card-body scroll-card">
+        <ul>
+          {{#each champions.champion}}
+          <li>{{eaten_by}} has eaten {{count}} burgers!</li>{{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

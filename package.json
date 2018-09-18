@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=heroku node server.js"
+    "start": "NODE_ENV=heroku node server.js",
+    "development": "NODE_ENV=local nodemon server.js"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,62 @@
+.outer-container {
+  margin-top: 20px;
+}
+
+.main-title {
+  float: left;
+}
+
 #main-burger {
-    width: 85%;
-    margin: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 85%;
+  margin: auto;
+  background-image: url("/assets/images/burger-gs.png");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;    
+  background-position: center;
+}
+
+.card {
+  width: 75%;
+}
+
+.right-card {
+  margin-left:auto;
+}
+
+.scroll-card {
+  padding: 0;
+  height:150px;
+  overflow-y: scroll;
+}
+
+.single-card-div {
+  width: 100%;
+}
+
+.single-card-right {
+  width: 33%;
+  margin-left: auto;
+}
+
+.double-card-right {
+  width: 66%;
+  margin-left: auto;
+}
+
+.double-card-left {
+  width: 66%;
+}
+
+.left-col {
+  padding-right: 0;
+}
+
+.right-col {
+  padding-left: 0;
 }
