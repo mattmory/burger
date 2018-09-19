@@ -21,7 +21,7 @@ $(function () {
             );
         }
         else {
-            alert("Eater names cannot be blank or more than 55 characters!");
+          $("#EaterNameError").modal(); 
         }
     });
 
@@ -46,7 +46,7 @@ $(function () {
             );
         }
         else {
-            alert("Burger cannot be blank or more than 55 characters!");
+          $("#BurgerNameError").modal(); 
         }
     });
 });

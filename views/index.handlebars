@@ -6,9 +6,9 @@
         <div class="card-body">
           <form class="create-burger">
             <div class="form-group">
-              <input type="text" id="burger" name="name">
+              <input class="form-control form-control-sm" type="text" id="burger" placeholder="Burger name..." name="name">
             </div>
-            <button class="btn btn-secondary" type="submit">Make a burger!</button>
+            <button class="btn btn-secondary btn-sm" type="submit">Make a burger!</button>
           </form>
         </div>
       </div>
@@ -49,4 +49,40 @@
     </div>
   </div>
 </div>
+</div>
+<div class="modal fade" id="BurgerNameError" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Invalid Burger Name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Make sure your burger name has no more than 55 characters.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="EaterNameError" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Invalid Name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Make sure your name has no more than 55 characters.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
